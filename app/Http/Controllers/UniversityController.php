@@ -14,30 +14,34 @@ class UniversityController extends Controller
     public function showAllStudents()
     {
         $students = Student::all();
-        return view('students.all', compact('students'));
+        return view('students.all', ['students' => $students]);
     }
 
     public function showStudent($id)
     {
         $student = Student::findOrFail($id);
-        return view('students.show', compact('student'));
+        return view('student.show', ['student' => $student]);
     }
 
     public function showAllColleges()
     {
-        $colleges = College::with('departments')->get();
-        return view('colleges.all', compact('colleges'));
-    }
+        $colleges = College::all();
+        $colleges = College::with('programs')->get();
 
+        return view('colleges.all', ['colleges' => $colleges]);
+    }
     public function showCollege($id)
     {
-        $college = College::with('departments')->findOrFail($id);
-        return view('colleges.show', compact('college'));
+        $college = College::findOrFail($id);
+        $colleges = College::with('departments')->get();
+        $colleges = College::with('programs')->get();
+        return view('college.show', ['college' => $college]);
     }
 
-    public function showAllDepartments()
+    public function showAllDepartments($id)
     {
-        $departments = Department::with('college')->get();
-        return view('departments.all', compact('departments'));
+        $departments = Department::all();
+        $departments = College::with('colleges')->get();
+        return view('departments.show', ['departments' => $departments]);
     }
 }

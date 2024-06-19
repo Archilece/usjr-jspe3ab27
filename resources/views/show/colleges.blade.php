@@ -1,3 +1,3 @@
 <div>
-    <!-- Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi -->
+    <!-- Because you are alive, everything is possible. - Thich Nhat Hanh -->
 </div>

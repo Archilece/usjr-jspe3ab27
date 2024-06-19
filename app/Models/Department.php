@@ -9,6 +9,10 @@ class Department extends Model
 {
     public function college()
     {
-        return $this->belongsTo(College::class);
+        return $this->hasOne(College::class);
+    }
+    public function programs()
+    {
+        return $this->hasMany(Programs::class);
     }
 }

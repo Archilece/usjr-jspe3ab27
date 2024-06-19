@@ -1,3 +1,3 @@
 <div>
-    <!-- Happiness is not something readymade. It comes from your own actions. - Dalai Lama -->
+    <!-- Breathing in, I calm body and mind. Breathing out, I smile. - Thich Nhat Hanh -->
 </div>
