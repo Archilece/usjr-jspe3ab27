@@ -6,22 +6,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/show/students/all',function () {
-    return view('/show/students/all');
-});
+Route::get('/show/students/all',[UniversityController::class,'showAllStudents']);
+Route::get('/show/student/',[UniversityController::class,'showStudent']);
+Route::get('/show/colleges',[UniversityController::class,'showAllColleges']);
+Route::get('/show/college/',[UniversityController::class,'showCollege']);
+Route::get('/show/departments',[UniversityController::class,'showAllDepartments']);
 
-Route::get('/show/students/{id}', function () {
-    return view('/show/students/id');
-});
 
-Route::get('/show/colleges', function () {
-    return view('/show/colleges');
-});
-
-Route::get('/show/colleges/{id}', function () {
-    return view('/show/college/id');
-});
-
-Route::get('/show/departments', function () {
-    return view('/show/departments');
-});
